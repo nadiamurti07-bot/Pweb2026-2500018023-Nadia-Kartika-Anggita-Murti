@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Layout Modifikasi</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Header */
+.header {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+  font-size: 30px;
+}
+
+/* Kolom */
+.column {
+  float: left;
+  width: 50%;   /* dari 3 kolom jadi 2 kolom */
+  padding: 10px;
+  height: 150px;
+}
+
+/* Clear float */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  background-color: #f1f1f1;
+  padding: 15px;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+<div class="header">Header</div>
+
+<!-- Baris pertama -->
+<div class="row">
+  <div class="column" style="background-color:#aaa;">Baris 1 - Kolom 1</div>
+  <div class="column" style="background-color:#bbb;">Baris 1 - Kolom 2</div>
+</div>
+
+<!-- Baris kedua -->
+<div class="row">
+  <div class="column" style="background-color:#ccc;">Baris 2 - Kolom 1</div>
+  <div class="column" style="background-color:#ddd;">Baris 2 - Kolom 2</div>
+</div>
+
+<div class="footer">Footer</div>
+
+</body>
+</html>
